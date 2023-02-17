@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 브라우저 스타일 초기화 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div class="container2"></div>
+    </div> -->
+
+    <div class="w-align-box categBox" >
+        <!-- case 1 -->
+        <div class="categBox2 thema_urgency_radius" Onclick="BTN_STOCK_READ('urgency','')">
+          <input type="hidden" id="urgency_chk" value="false" />
+          <input type="hidden" id="categContent_chk1" value="false" />
+          <div class="titleBox" id="title_urgency">
+            <p class="categTitle2 thema_urgency">긴급</p>
+          </div>
+          <!-- <div class="imgBox" id="imgBox_urgency">
+            <img style="width: 80px; height: 70px; display: table-cell; vertical-align: middle;" 
+                src="./images/aiscm/urgency_inventory.png" />
+          </div>
+          <div class="categCotentBox2" id="categContent1" style="display: none">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_urgency">--</p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_urgency">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_urgency">--</p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div>
+          <div class="categCotentBox2" id="categContentReset1">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_urgency"></p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_urgency">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_urgency"></p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- case 2 -->
+        <div class="categBox2 thema_shortage_radius" Onclick="BTN_STOCK_READ('shortage','')">
+          <input type="hidden" id="shortage_chk" value="false" />
+          <input type="hidden" id="categContent_chk2" value="false" />
+          <div class="titleBox_shortage" id="title_shortage">
+            <p class="categTitle2 thema_shortage">부족</p>
+          </div>
+          <div class="imgBox" id="imgBox_shortage">
+            <img style="width: 80px; height: 70px; display: table-cell; vertical-align: middle;"
+                src="/images/aiscm/shortage_inventory.png"/>
+          </div>
+          <div class="categCotentBox2" id="categContent2" style="display: none">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_shortage">--</p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_shortage">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_shortage">--</p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div>
+          <div class="categCotentBox2" id="categContentReset2">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_urgency"></p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_urgency">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_urgency"></p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div>
+        </div>
+        <!-- case 3 -->
+        <div class="categBox2 thema_normal_radius" Onclick="BTN_STOCK_READ('normal','')">
+          <input type="hidden" id="normal_chk" value="false" />
+          <input type="hidden" id="categContent_chk3" value="false" />
+          <div class="titleBox_normal" id="title_normal">
+            <p class="categTitle2 thema_normal">정상</p>
+          </div>
+          <div class="imgBox" id="imgBox_normal">
+            <img style="width: 80px; height: 70px; display: table-cell; vertical-align: middle;"
+                src="/images/aiscm/normal_inventory.png"/>
+          </div>
+          <div class="categCotentBox2" id="categContent3" style="display: none">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_normal">--</p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_normal">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_normal">--</p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div>
+          <div class="categCotentBox2" id="categContentReset3">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_urgency"></p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_urgency">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_urgency"></p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- case 4 -->
+        <div class="categBox2 thema_over_radius" Onclick="BTN_STOCK_READ('over','')">
+          <input type="hidden" id="over_chk" value="false" />
+          <input type="hidden" id="categContent_chk4" value="false" />
+          <div class="titleBox_over" id="title_over">
+            <p class="categTitle2 thema_over">초과</p>
+          </div>
+          <div class="imgBox" id="imgBox_over">
+            <img style="width: 80px; height: 70px; display: table-cell; vertical-align: middle;"
+                src="/images/aiscm/over_inventory.png" />
+          </div>
+          <div class="categCotentBox2" id="categContent4" style="display: none">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_over">--</p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_over">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_over">--</p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div>
+          <div class="categCotentBox2" id="categContentReset4">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_urgency"></p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_urgency">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_urgency"></p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div>
+        </div>
+        <!-- case 5 -->
+        <div class="categBox2 thema_bad_radius" Onclick="BTN_STOCK_READ('bad','')">
+          <input type="hidden" id="bad_chk" value="false" />
+          <input type="hidden" id="categContent_chk5" value="false" />
+          <div class="titleBox_bad" id="title_bad">
+            <p class="categTitle2 thema_bad">과잉</p>
+          </div>
+          <div class="imgBox" id="imgBox_bad">
+            <img style="width: 80px; height: 70px; display: table-cell; vertical-align: middle;"
+                src="/images/aiscm/bad_inventory.png"/>
+          </div>
+          <div class="categCotentBox2" id="categContent5" style="display: none">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_bad">--</p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_bad">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_bad">--</p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div>
+          <div class="categCotentBox2" id="categContentReset5">
+            <div style="line-height: 100%">
+              <p class="categContetNumber" id="p_item_urgency"></p>
+              <p class="categContetUnit">품목</p>
+              <p class="categContetUnit" id="p_percent_urgency">(%)</p>
+            </div>
+            <div>
+              <p class="categContetUnit" id="p_vendor_urgency"></p>
+              <p class="categContetUnit">공급사</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-align-box">
+        <div class="grid-body " id="gridBody">
+          <div id="grid" style="width: 1300px; height: 800px; display: block; background-color: orange; margin-left: 250px;"></div>                                                                                                                  
+        </div>           
+    </div>
+  </body>
+</html>
