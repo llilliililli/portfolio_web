@@ -3,223 +3,140 @@
 
 /* COMMON */
 .categBox{
-  display: flex; 
+  display: flex;
+  width: 100%;
   justify-content: center;
-  border-style: solid;
-  border: 0px;
-  border-color: #bdbdbd;
-  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 100px;
 }
 
 .categBox .categBox2 {
-  float: left;
   width: 270px;
   margin: 5px;
   background: #fff;
   cursor: pointer;
+  position: relative;
 }
 
+
+/* Categ Title */
+
 .categBox .categBox2 .titleBox {
-  width: 80px;
-  height: 100%;
-  background: #00b050;
-  color: #fff;
-  text-align: center;
-  justify-content: center;
+  position: absolute;
+  perspective: 600px;
 }
+
+
+
+
+.categBox .categBox2 .titleBox .front,
+.categBox .categBox2 .titleBox .back{
+  backface-visibility: hidden;
+  transition: 1s;
+  margin-top: 5px;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 3px;
+  overflow: auto;
+}
+
+.categBox2 .titleBox .front {
+  transform: rotateY(0deg);
+}
+
+.categBox2 .titleBox:hover .front {
+  transform: rotateY(180deg);
+}
+
+.categBox2 .titleBox .back{
+  transform: rotateY(-180deg);
+}
+
+.categBox2 .titleBox:hover .back{
+  transform: rotateY(0deg);
+
+}
+
+.categBox2 .titleBox .categTitle {
+  margin: 26px 0;
+  left: 15px;
+  font-family: Sans-Serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+}
+
+
+.categBox2 .titleBox .categImg{
+  width: 80px;
+  height: 70px;
+  position: absolute;
+
+}
+
+
+/* Categ Description */
+
+.categBox .descripBox{
+  position: absolute;
+  /* background-color: #00b050; */
+  left: 100px;
+  margin-top: 10px;
+  width: 90px;
+  height: 80px;
+}
+
+.categBox .descripBox .itemBox,
+.categBox .descripBox .supplyBox{
+  display: flex;
+  left: 0;
+  width: 170px;
+}
+
+.categBox .descripBox .itemBox{
+  position: absolute;
+  top: 5px;
+}
+
+.categBox .descripBox .supplyBox{
+  position: absolute;
+  top: 35px;
+}
+
+
+
+
+.categBox .descripBox .itemBox p,
+.categBox .descripBox .supplyBox p{
+  font-family: Sans-Serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.categBox .descripBox .itemBox .item_title{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+
 
 
 /* CATEG THEMA */
 
 
-
-
-
-.categCotentBox2 {
-  max-height: 85px;
-  max-width: 180px;
-  background: #fff;
-  float: left;
-  text-align: center !important;
-  margin: 10px 0px 0px 5px;
+.categBox .categBox2 .titleBox .thema_urgency{
+  background-color: #ff0000;
 }
 
-.categTitle2 {
-  font-family: Sans-Serif;
-  font-size: 1.6vw;
-  font-weight: 900;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0px 5px 0px;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.categContetNumber {
-  float: left;
-  font-family: Sans-Serif;
-  font-size: 1.6vw;
-  font-weight: 900;
-  color: #000000;
-  margin: 5px 1px 0px 1px;
-}
-
-.categContetUnit {
-  float: left;
-  font-family: Sans-Serif;
-  font-size: 1vw;
-  font-weight: 600;
-  color: #000000;
-  margin: 7px 1px 0px 1px;
-}
-
-.categContetUnit2 {
-  float: left;
-  font-family: Sans-Serif;
-  font-size: 0.9vw;
-  font-weight: 400;
-  color: #000000;
-  margin: 7px 1px 0px 1px;
-}
-
-.thema_defalut {
-  background: #fff;
-  border: 2px;
-  border-style: solid;
-  border-color: #d9e5ff;
-  border-radius: 5px;
-}
-
-.thema_defalut2 {
-  background: #fff;
-}
-
-.thema_defalut_btn {
-  background: #82a7d4;
-}
-
-.thema_bad {
-  background: #002060;
-}
-
-.thema_bad_btn {
-  background: #002060;
-}
-
-.thema_bad_font {
-  color: #002060;
-}
-
-.thema_bad_radius {
-  border-top: 3px solid #002060;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
-  border-left: 3px solid #fff;
-}
-
-.titleBox_bad {
-  float: left;
-  width: 80px;
-  height: 70px;
-  margin: 5px 5px 0px 5px;
-  background: #002060;
-  display: table;
-}
-
-.thema_over {
-  background: #0070c0;
-}
-
-.thema_over_btn {
-  background: #0070c0;
-}
-
-.thema_over_font {
-  color: #0070c0;
-}
-
-.thema_over_radius {
-  border-top: 3px solid #0070c0;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
-  border-left: 3px solid #fff;
-}
-
-.titleBox_over {
-  float: left;
-  width: 80px;
-  height: 70px;
-  margin: 5px 5px 0px 5px;
-  background: #0070c0;
-  display: table;
-}
-
-.thema_normal {
-  background: #00b050;
-}
-
-.thema_normal_btn {
-  background: #00b050;
-}
-
-.thema_normal_font {
-  color: #00b050;
-}
-
-.thema_normal_radius {
-  border-top: 3px solid #00b050;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
-  border-left: 3px solid #fff;
-}
-
-.titleBox_normal {
-  float: left;
-  width: 80px;
-  height: 70px;
-  margin: 5px 5px 0px 5px;
-  background: #00b050;
-  display: table;
-}
-
-.thema_shortage {
-  background: #ed7d31;
-}
-
-.thema_shortage_btn {
-  background: #ed7d31;
-}
-
-.thema_shortage_font {
-  color: #ed7d31;
-}
-
-.thema_shortage_radius {
-  border-top: 3px solid #ed7d31;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
-  border-left: 3px solid #fff;
-}
-
-.titleBox_shortage {
-  float: left;
-  width: 80px;
-  height: 70px;
-  margin: 5px 5px 0px 5px;
-  background: #ed7d31;
-  display: table;
-}
-
-.thema_urgency {
-  background: #ff0000;
-}
-
-.thema_urgency_btn {
-  background: #ff0000;
-}
-
-.thema_urgency_color {
-  color: #ff0000;
+.categBox .categBox2 .titleBox .thema_urgency_back{
+  /* border: 1px solid black; */
+  background-color: rgb(248, 164, 164);
 }
 
 .thema_urgency_radius {
@@ -229,55 +146,67 @@
   border-left: 3px solid #fff;
 }
 
-.titleBox_urgency {
-  float: left;
-  width: 80px;
-  height: 70px;
-  margin: 5px 5px 0px 5px;
-  background: #ff0000;
-  display: table;
+.categBox .categBox2 .titleBox .thema_shortage{
+  background-color: orange;
 }
 
-.imgBox {
-  float: left;
-  width: 80px;
-  height: 70px;
-  margin: 5px 5px 0px 5px;
-  background: #fff;
-  display: none;
-  vertical-align: middle;
+.categBox .categBox2 .titleBox .thema_shortage_back{
+  /* border: 1px solid black; */
+  background-color: rgb(228, 190, 119);
 }
 
-.btn_categ_help {
-  float: right;
-  color: #fff;
-  background: #82a7d4;
-  padding: 1px;
-  width: 60px;
-  height: 30px;
-  border: solid 1px #d0d0d0;
-  border-radius: 3px;
-  cursor: pointer;
+.thema_shortage_radius {
+  border-top: 3px solid #ed7d31;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
 }
 
-.btn_categ_help:active {
-  float: right;
-  color: #fff;
-  background: #0070c0;
-  padding: 1px;
-  width: 60px;
-  height: 30px;
-  border: solid 1px #d0d0d0;
-  border-radius: 3px;
+.categBox .categBox2 .titleBox .thema_normal{
+  background-color: #00b050;
 }
 
-.divView {
-  position: absolute;
-  display: none;
-  background-color: #ffffff;
-  border: solid 2px #d0d0d0;
-  width: 400px;
-  height: 160px;
-  padding: 10px;
-  z-index: 1;
+.categBox .categBox2 .titleBox .thema_normal_back{
+  /* border: 1px solid black; */
+  background-color: rgb(156, 231, 156);
 }
+
+.thema_normal_radius {
+  border-top: 3px solid #00b050;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+
+.categBox .categBox2 .titleBox .thema_over{
+  background-color: #0070c0;
+}
+
+.categBox .categBox2 .titleBox .thema_over_back{
+  /* border: 1px solid black; */
+  background-color: #82a7d4;
+}
+
+.thema_over_radius {
+  border-top: 3px solid #0070c0;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+
+.categBox .categBox2 .titleBox .thema_bad{
+  background-color: #002060;
+}
+
+.categBox .categBox2 .titleBox .thema_bad_back{
+  /* border: 1px solid black; */
+  background-color: #3b5996;
+}
+
+.thema_bad_radius {
+  border-top: 3px solid #002060;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+
