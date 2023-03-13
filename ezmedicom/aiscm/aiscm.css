@@ -19,7 +19,7 @@
 }
 
 
-/* Categ Title */
+/* COMMON - Categ Title */
 
 .categBox .categBox2 .titleBox {
   position: absolute;
@@ -80,7 +80,7 @@
 }
 
 
-/* Categ Description */
+/* COMMON - Categ Description */
 
 .categBox .descripBox{
   position: absolute;
@@ -96,6 +96,7 @@
   display: flex;
   left: 0;
   width: 170px;
+  line-height: 100%;
 }
 
 .categBox .descripBox .itemBox{
@@ -127,7 +128,7 @@
 
 
 
-/* CATEG THEMA */
+/* THEMA */
 
 
 .categBox .categBox2 .titleBox .thema_urgency{
